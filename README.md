@@ -1,0 +1,2 @@
+# busqueda.py
+Práctica Copilot
