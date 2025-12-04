@@ -5,21 +5,16 @@
 #    La función debe devolver el índice del elemento si se encuentra
 #    y -1 si el elemento no está en la lista.
 
-def buscar_elemento(lista, elemento):
+ def buscar_elemento(lista, elemento):
     """
-    Busca `elemento` en `lista` usando un bucle while.
-    Devuelve el índice del primer elemento coincidente o -1 si no se encuentra.
+    Busca un elemento en una lista y devuelve su índice.
+    Si no se encuentra, devuelve -1.
     """
-    i = 0
-    while i < len(lista):
-        if lista[i] == elemento:
+    for i, valor in enumerate(lista):
+        if valor == elemento:
             return i
-        i += 1
     return -1
 
-
-# Ejemplos de uso
-if __name__ == "__main__":
-    datos = [10, 20, 30, "hola", 50]
-    print(buscar_elemento(datos, 30))    # Salida: 2
-    print(buscar_elemento(datos, "adiós"))  # Salida: -1
+# 2) Implementar una función buscar_en_diccionarios(lista, clave, valor)
+#    que reciba una lista de diccionarios y devuelva el índice del primer
+#    diccionario donde dic[clave] == valor, o -1 si no existe.
